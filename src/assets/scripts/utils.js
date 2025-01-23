@@ -1,7 +1,8 @@
 //LOCAL:
-const API_URL = "http://localhost:8080";
+//const API_URL = "http://localhost:8080";
+
 //CLOUD:
-//const API_URL = "https://happyfit-app.azurewebsites.net";
+const API_URL = "https://happyfit-91d0438f5ccb.herokuapp.com";
 
 async function getData(resource, successMessage) {
     try {
