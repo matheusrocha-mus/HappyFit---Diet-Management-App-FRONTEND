@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/styles/header-e-padroes.css">
+    <link rel="stylesheet" href="assets/styles/primeiro-acesso.css">
+    <title>HappyFit - Primeiro Acesso</title>
+</head>
+
+<body>
+    <header id="header" class="border-bottom"></header>
+    <main class="d-flex mx-auto form-container justify-content-center">
+        <div id="mode-choice" class="my-auto">
+            <h1 class="fw-normal">Este é seu primeiro acesso</h1>
+            <ul>Esta aplicação é direcionada para dois tipos de usuário:
+                <li>Indivíduos que já têm relativa experiência e conhecimento com montagem de dietas</li>
+                <li>Nutricionistas que realizam acompanhamento com clientes leigos em nutrição</li>
+            </ul>
+            <p>Selecione abaixo em que modalidade deseja prosseguir no uso da aplicação:</p>
+            <form action="" id="login-form" class="form-floating">
+                <div class="form-group form-check">
+                    <input type="radio" id="sozinho" class="form-check-input form-control floatingInput me-2" name="modalidade" value="alone">
+                    <label for="sozinho" class="form-check-label">Montarei minha dieta sozinho</label><br>
+                    <input type="radio" id="comNutricionista" class="form-check-input form-control floatingInput me-2" name="modalidade" value="withNutritionist">
+                    <label for="comNutricionista" class="form-check-label">Serei acompanhado por um nutricionista</label><br>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="submitMode" class="btn btn-primary w-30 py-2 my-1 expand-on-hover space-around">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div id="nutricionist-chosen" class="my-auto d-none">
+            <h1>Informe o seu Email ao seu nutricionista e aguarde</h1>
+            <p>Envie/mostre para seu nutricionista o seu email: <strong id="show-id"></strong></p>
+        </div>
+    </main>
+</body>
+
+<script type="text/javascript" src="assets/scripts/header.js"></script>
+<script type="text/javascript" src="assets/scripts/loggedUser.js"></script>
+<script type="text/javascript" src="assets/scripts/utils.js"></script>
+<script type="text/javascript" src="assets/scripts/primeiro-acesso.js"></script>
+
+</html>

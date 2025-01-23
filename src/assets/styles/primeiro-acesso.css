@@ -1,0 +1,56 @@
+:root{
+    /*Paleta de Cores*/
+    --principal: #FEF9E6;
+    --secundaria: #02232C;
+    --preto: #333;
+    --azul: #5CCAC4;
+    --vermelho: #FE5E48;
+    
+
+    /*Tipografia*/
+    --font-family: "Quicksand", sans-serif;
+
+    /*--elemento-atributo-plataforma(d = desktop|m = mobile)*/
+    --title-weight: <600>;
+    --titleG-size-d: 2.5rem;
+    --titleM-size-d: 2rem;
+    --titleP-size-d: 1.5rem;
+    --titleG-size-m: 2rem;
+    --titleM-size-m: 1.5rem;
+    --text-weight: <400>;
+    --text-size-d: 1rem;
+    --text-size-m: 0.8rem;
+    --link-size-d: 1.2rem; /*Tamanho do texto dos botões - desktop*/
+    --link-size-m: 1rem; /*Tamanho do texto dos botões - mobile*/
+}
+
+ul, li {
+    font-family: var(--font-family);
+    color: var(--branco);
+    padding: 10px 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+main {
+    height: 80%;
+}
+
+.btn-primary{
+    background-color: var(--secundaria);
+}
+
+.btn-primary:hover{
+    background-color: var(--azul);
+    border: none;
+}

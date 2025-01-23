@@ -1,0 +1,113 @@
+:root{
+  /*Paleta de Cores*/
+  --principal: #FEF9E6;
+  --secundaria: #02232C;
+  --preto: #333;
+  --azul: #5CCAC4;
+  --vermelho: #FE5E48;
+  
+
+  /*Tipografia*/
+  --font-family: "Quicksand", sans-serif;
+
+  /*--elemento-atributo-plataforma(d = desktop|m = mobile)*/
+  --title-weight: <600>;
+  --titleG-size-d: 2.5rem;
+  --titleM-size-d: 2rem;
+  --titleP-size-d: 1.5rem;
+  --titleG-size-m: 2rem;
+  --titleM-size-m: 1.5rem;
+  --text-weight: <400>;
+  --text-size-d: 1rem;
+  --text-size-m: 0.8rem;
+  --link-size-d: 1.2rem; /*Tamanho do texto dos botões - desktop*/
+  --link-size-m: 1rem; /*Tamanho do texto dos botões - mobile*/
+}
+
+.tab {
+    display: none;
+    width: 100%;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color: var(--principal);
+    font-family: var(--font-family);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    background-color: var(--azul);
+    color: var(--principal);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#prevBtn {
+    background-color: var(--vermelho);
+}
+
+#nextBtn {
+    background-color: var(--azul);
+}
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+    .step.finish {
+      background-color: var(--azul);
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-control,
+    .form-select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .invalid-feedback {
+      color: var(--vermelho);
+      display: none;
+    }
+
+    .form-control.invalid,
+    .form-select.invalid {
+      border-color: var(--vermelho);
+    }
+
+    .form-control:invalid~.invalid-feedback,
+    .form-select:invalid~.invalid-feedback {
+      display: block;
+    }

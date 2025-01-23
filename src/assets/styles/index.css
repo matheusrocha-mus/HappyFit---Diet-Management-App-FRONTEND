@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    /*Paleta de Cores*/
+    --principal: #FEF9E6;
+    --secundaria: #02232C;
+    --preto: #333;
+    --azul: #5CCAC4;
+    --vermelho: #FE5E48;
+    
+
+    /*Tipografia*/
+    --font-family: "Quicksand", sans-serif;
+
+    /*--elemento-atributo-plataforma(d = desktop|m = mobile)*/
+    --title-weight: <600>;
+    --titleG-size-d: 2.5rem;
+    --titleM-size-d: 2rem;
+    --titleP-size-d: 1.5rem;
+    --titleG-size-m: 2rem;
+    --titleM-size-m: 1.5rem;
+    --text-weight: <400>;
+    --text-size-d: 1rem;
+    --text-size-m: 0.8rem;
+    --link-size-d: 1.2rem; /*Tamanho do texto dos botões - desktop*/
+    --link-size-m: 1rem; /*Tamanho do texto dos botões - mobile*/
+}
+/*Algumas definições gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+}
+
+h1 {
+    font-family: var(--font-family);
+    font-weight: var(--title-weight);
+    font-size: var(--titleG-size-d);
+    color: var(--branco);
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-weight: var(--title-weight);
+    font-size: var(--titleM-size-d);
+    color: var(--branco);
+}
+
+h3 {
+    font-family: var(--font-family);
+    font-weight: var(--title-weight);
+    font-size: var(--titleP-size-d);
+    color: var(--branco); 
+}
+
+p {
+    font-family: var(--font-family);
+    color: var(--branco);
+    padding: 10px 0;
+    margin: 0;
+}
+
+a.btn {
+    font-family: var(--font-family);
+    font-size: var(--link-size-d);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*HEADER*/
+nav {
+    background-color: var(--preto);
+}
+
+.nav-link {
+    padding: 1em;
+    font-family: var(--font-family);
+    color: var(--branco);
+}
+
+.nav-link:hover {
+    color: var(--azul);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    background-color: var(--branco);
+}
+
+.navbar-toggler-icon {
+    color: var(--branco);
+}
+
+.logo {
+    width: 80px;
+}
+
+.btn-primary.cadastro {
+    background-color: var(--azul);
+    border-color: var(--azul);
+}
+
+.btn-modal{
+    background-color: var(--secundaria);
+    color: var(--principal);
+}
+
+.btn-modal:hover{
+    background-color: var(--azul);
+    color: var(--principal);
+}
+/*FIM HEADER*/
+/*INICIO*/
+section.inicio {
+    padding: 20px;
+    min-height: calc(100vh - 106px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.inicio a {
+    margin: 10px 0;
+}
+a.btn-outline-light:hover {
+    background-color: var(--azul);
+}
+/*FIM INICIO*/
+
+.dev {
+    padding: 40px 0;
+}
+
+/*CARD DESENVOLVEDORES*/
+.card {
+    background-color: transparent;
+}
+
+.card img {
+    width: 80%;
+}
+
+.sociais i {
+    color: var(--secundaria);
+    font-size: var(--titleP-size-d);
+    padding: 5px;
+}
+/*FIM CARD DESENVOLVEDORES*/
+
+/*CELULARES*/
+@media (max-width: 767px) {
+    h1 {
+        font-size: var(--titleG-size-m);
+    }
+    
+    h2 {
+        font-size: var(--titleM-size-m);
+    }
+    
+    h3 {
+        font-size: var(--titleM-size-m);
+    }
+    
+    a.btn {
+        font-size: var(--link-size-m);
+    }
+    section.inicio {
+        min-height: calc(100vh - 110px);
+        text-align: center;
+    }
+    section.inicio p {
+        text-align: justify
+    }
+    section {
+        height: auto;
+    }
+    .card img {
+        width: 50%;
+    }
+}
+
+.expand-on-hover { transition: 0.3s; }
+.expand-on-hover:hover { transform: scale(1.1); }

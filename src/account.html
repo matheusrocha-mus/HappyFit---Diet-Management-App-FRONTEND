@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/styles/header-e-padroes.css">
+    <link rel="stylesheet" href="assets/styles/account.css">
+    <title>HappyFit - Account User</title>
+</head>
+
+<body>
+    <header id="header" class="border-bottom"></header>
+
+    <section class="mt-5">
+        <div class="container">
+            <!--Usuário -->
+            <h2 class="mb-0 mt-5" id="perfil-name">Usuário</h2>
+            <hr class="mt-2">
+
+            <!-- Detalhes -->
+            <div class="row">
+                <!-- Descrição -->
+                <div class="col-md-6">
+                    <table class="table table-dark table-striped">
+                        <tre>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Sobrenome</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Email</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td id="user-name"></td>
+                                    <td id="user-surname"></td>
+                                    <td id="user-category"></td>
+                                    <td id="user-email"></td>
+                                </tr>
+                            </tbody>
+                    </table>
+
+
+                    <h2 class="mb-0 mt-5" id="perfil-name">Detalhes</h2>
+                    <hr class="mt-2">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tre>
+                                <th scope="col">Macro</th>
+                                <th scope="col">Dieta</th>
+                                <th scope="col">Média diária</th>
+                                <th scope="col">Último Diário</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Calorias:</td>
+                                <td id="caloriasEsperado"></td>
+                                <td id="caloriasMedia"></td>
+                                <td id="caloriasUltimo"></td>
+                            </tr>
+                            <tr>
+                                <td>Proteínas:</td>
+                                <td id="proteinasEsperado"></td>
+                                <td id="proteinasMedia"></td>
+                                <td id="proteinasUltimo"></td>
+                            </tr>
+                            <tr>
+                                <td>Carboidratos:</td>
+                                <td id="carboidratosEsperado"></td>
+                                <td id="carboidratosMedia"></td>
+                                <td id="carboidratosUltimo"></td>
+                            </tr>
+                            <tr>
+                                <td>Gorduras:</td>
+                                <td id="gorduraEsperado"></td>
+                                <td id="gorduraMedia"></td>
+                                <td id="gorduraUltimo"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class=" d-flex my-4">
+                        <button type="submit" class="btn expand-on-hover text-light mx-2" id="btn-delete">Excluir Perfil</button>
+
+                        <!-- Button Modal informações de usuário -->
+                        <button id="button-perfilAlimentar" type="button" class="btn expand-on-hover text-light mx-2"
+                            data-bs-toggle="modal" data-bs-target="#variavelModal">
+                            Meu Perfil Alimentar
+                        </button>
+
+                        <!-- Button Modal Redefinir senha-->
+                        <button type="button" id="redefinirSenhaButton" class="btn expand-on-hover btn-outline mx-2"
+                            data-bs-toggle="modal" data-bs-target="#redefinirSenhaModal">
+                            Redefinir senha
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/DrawPerfil.png" class="w-100 object-fit-cover perfil" height=""
+                        alt="img ilustrativa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal informações de usuário -->
+    <div class="modal fade" id="variavelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Perfil Alimentar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Acompanhamento:</strong> <span
+                                id="user-acompanhamento"></span></li>
+                        <li class="list-group-item"><strong>Peso:</strong> <span id="user-weight"></span> Kg</li>
+                        <li class="list-group-item"><strong>Altura:</strong> <span id="user-height"></span> Cm</li>
+                        <li class="list-group-item"><strong>Idade:</strong> <span id="user-age"></span> Anos</li>
+                        <li class="list-group-item"><strong>Sexo:</strong> <span id="user-sex"></span></li>
+                        <li class="list-group-item"><strong>Medida Cintura:</strong> <span id="user-waist"></span> Cm
+                        </li>
+                        <li class="list-group-item"><strong>Medida Quadril:</strong> <span id="user-hip"></span> Cm
+                        </li>
+                        <li class="list-group-item"><strong>Medida Pescoço:</strong> <span id="user-scruff"></span> Cm
+                        </li>
+                        <li class="list-group-item"><strong>Objetivo Atual:</strong> <span id="user-goal"></span></li>
+                        <li class="list-group-item"><strong>Nível de atividade física semanal:</strong> <span
+                                id="user-levelAthlete"></span></li>
+
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="./editPerfilAlimentar.html" type="button" id="button-editPerfilAlimentar"
+                        class="btn text-light">Editar informações</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Redefinir senha -->
+    <div class="modal fade" id="redefinirSenhaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Redefinir senha</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formUser-password">
+                        <!-- SENHA DO USUARIO -->
+                        <div class="input-group mb-3">
+                            <label for="user-password" class="col-12">Senha:</label>
+                            <input type="password" class="form-control" id="user-password"
+                                placeholder="Insira sua Senha" required="" aria-describedby="passwordHelp">
+                            <button class="btn btn-light" type="button" id="view-password">
+                                <span id="toggle-visibility" class="input-group-text toggle-visibility"
+                                    id="basic-addon1">
+                                    <svg id="hide-eye1" class="bi bi-eye-slash" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486z">
+                                        </path>
+                                        <path
+                                            d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829">
+                                        </path>
+                                        <path
+                                            d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708">
+                                        </path>
+                                    </svg>
+                                    <svg id="show-eye1" class="bi bi-eye d-none" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                        <path
+                                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                    </svg>
+                            </button>
+                            <div id="passwordHelp" class="info col-11">Senhas devem ter no mínimo 8 caracteres, uma
+                                letra maiúscula, uma letra minúscula e um caracter especial!</div>
+                            <div class="invalid-feedback">
+                                Senha obrigatório
+                            </div>
+                        </div>
+
+                        <!-- Confirmação de SENHA DO USUARIO -->
+                        <div class="input-group mb-3">
+                            <label for="confirm-user-password" class="col-12">Confirmação de Senha:</label>
+                            <input type="password" class="form-control" id="user-confirm-password"
+                                placeholder="Confirme sua Senha" required="">
+                            <button class="btn btn-light" type="button" id="view-confirm-password">
+                                <span id="toggle-visibility" class="input-group-text toggle-visibility"
+                                    id="basic-addon1">
+                                    <svg id="hide-eye2" class="bi bi-eye-slash" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486z">
+                                        </path>
+                                        <path
+                                            d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829">
+                                        </path>
+                                        <path
+                                            d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708">
+                                        </path>
+                                    </svg>
+                                    <svg id="show-eye2" class="bi bi-eye d-none" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                        <path
+                                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                    </svg>
+                                </span></button>
+                            <div class="invalid-feedback">
+                                Confirmação de senha obrigatório
+                            </div>
+                        </div>
+                        <button type="submit" id="button-confirmPassword" class="btn text-light">Confirmar nova
+                            senha</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/scripts/header.js"></script>
+<script type="text/javascript" src="assets/scripts/loggedUser.js"></script>
+<script type="text/javascript" src="assets/scripts/utils.js"></script>
+<script type="text/javascript" src="assets/scripts/account.js"></script>
+
+</html>

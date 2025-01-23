@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    /*Paleta de Cores*/
+    --principal: #FEF9E6;
+    --secundaria: #02232C;
+    --preto: #333;
+    --azul: #5CCAC4;
+    --vermelho: #FE5E48;
+    
+
+    /*Tipografia*/
+    --font-family: "Quicksand", sans-serif;
+
+    /*--elemento-atributo-plataforma(d = desktop|m = mobile)*/
+    --title-weight: <600>;
+    --titleG-size-d: 2.5rem;
+    --titleM-size-d: 2rem;
+    --titleP-size-d: 1.5rem;
+    --titleG-size-m: 2rem;
+    --titleM-size-m: 1.5rem;
+    --text-weight: <400>;
+    --text-size-d: 1rem;
+    --text-size-m: 0.8rem;
+    --link-size-d: 1.2rem; /*Tamanho do texto dos botões - desktop*/
+    --link-size-m: 1rem; /*Tamanho do texto dos botões - mobile*/
+}
+
+.btn-primary {
+    background-color: var(--secundaria);
+    border-color: var(--principal);
+}
+
+.btn-primary:hover {
+    border: none;
+    background-color: var(--azul);
+}
+
+.btn-secondary {
+    background-color: var(--azul);
+    border-color: var(--principal);
+}
+
+section#vh {
+    min-height: calc(100vh - 145px);
+    padding: 40px 0;
+}
+
+section.atendimento .cliente {
+    margin: 10px 0;
+    padding: 20px 10px;
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: var(--secundaria);
+}
+
+section.atendimento i {
+    color: var(--preto);
+}
+
+/*MODAL*/
+#addAtendimento .modal-content,#temPerfil .modal-content {
+    background-color: var(--principal);
+}
+
+.cancelar{
+    background-color: var(--vermelho);
+}
+
+.cancelar:hover{
+    background-color: var(--vermelho);
+    border: none;
+}
+
+.adicionar{
+    background-color: var(--azul);
+}
+
+.adicionar:hover{
+    background-color: var(--azul);
+    border: none;
+}
+
+.nao{
+    background-color: var(--vermelho);
+}
+
+.nao:hover{
+    background-color: var(--vermelho);
+}
+
+.sim{
+    background-color: var(--azul);
+}
+
+.sim:hover{
+    background-color: var(--azul);
+    border: none;
+}
+/*FIM MODAL*/
